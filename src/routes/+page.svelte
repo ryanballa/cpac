@@ -2,8 +2,8 @@
 	<div class="row--50-50 banner-inner">
 		<div class="col">
 			<h1>Clarendon Park Renovations</h1>
-			<p>Our 100+ year old building is underoing going a gut rehab.</p>
-			<p><a class="p-button--positive" href="/renovations">Learn More</a></p>
+			<p>Our 100+ year old building is undergoing going a gut rehab.</p>
+			<p><a class="p-button--brand" href="/renovations">Learn More</a></p>
 		</div>
 	</div>
 </section>
@@ -29,7 +29,7 @@
 				<div class="p-card__content">
 					<img class="p-card__image" alt="Garden tools" src="images/home-section-garden.jpeg" />
 					<p>Our garden beds are an ever popular fixture of Clarendon Park.</p>
-					<p><a class="p-button--positive" href="#">Explore What's Growing On</a></p>
+					<p><a class="p-button--brand" href="#">Explore What's Growing On</a></p>
 				</div>
 			</div>
 		</div>
@@ -63,7 +63,7 @@
 					</p>
 					<p>
 						<a
-							class="p-button--positive"
+							class="p-button--brand"
 							href="https://www.chicagoparkdistrict.com/parks-facilities/clarendon-community-center-park#Programs"
 							>Browse Programs</a
 						>
@@ -87,7 +87,7 @@
 			<h3>Garfield-Clarendon Model Railroad Club</h3>
 			<p>
 				One of the longest-running model railroad groups in the nation. Break the notion model
-				railroading is watching trains run in circles. People who love art, painting minatures,
+				railroading is watching trains run in circles. People who love art, painting miniatures,
 				electronics, painting, and photography will find part of this hobby fascinating.
 			</p>
 			<div class="p-card">
@@ -98,7 +98,7 @@
 						space. Help us create a new scene or bring something of your own to work on!
 					</p>
 					<p>
-						<a class="p-button--positive" href="/garfield-clarendon-model-railroad">Get on Track</a>
+						<a class="p-button--brand" href="/garfield-clarendon-model-railroad">Get on Track</a>
 					</p>
 				</div>
 			</div>
@@ -109,5 +109,8 @@
 <style lang="scss">
 	#homepage-banner {
 		background: url(/images/home-banner.jpeg);
+	}
+	.p-card {
+		width: 50%;
 	}
 </style>

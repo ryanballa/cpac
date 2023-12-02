@@ -19,7 +19,8 @@
 	</div>
 </div>
 <section class="p-section">
-	<div class="row--50-50">
+	<div class="row--25-25-25-25">
+		<h3>November 2023</h3>
 		<div class="col">
 			<div class="p-card">
 				<div class="p-card__content">

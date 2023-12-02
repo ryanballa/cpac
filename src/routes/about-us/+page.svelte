@@ -7,14 +7,14 @@
 			<h2>A Park for All People</h2>
 			<p>
 				We are a volunteer group of individuals that promote community utilization of Clarendon
-				Park, provide communication to the Park District, facilite community awareness of park
+				Park, provide communication to the Park District, facilitate community awareness of park
 				programs, and help find alternative funding.
 			</p>
 		</div>
 	</div>
 </section>
 <section class="p-section">
-	<div class="row--50-50">
+	<div class="row--25-25-25-25">
 		<h2>Making Memories Together</h2>
 		<div class="col">
 			<div class="p-card">
@@ -22,9 +22,9 @@
 					<img
 						class="p-card__image"
 						alt="People celebrating"
-						src="images/about-silly-stock-photo.jpeg"
+						src="images/easter-egg-hunt-april-2017_orig.jpg"
 					/>
-					<p>Team celebration.</p>
+					<p>Easter Egg Hunt</p>
 				</div>
 			</div>
 		</div>
@@ -41,10 +41,10 @@
 				<div class="p-card__content">
 					<img
 						class="p-card__image"
-						alt="Kids playing on the playground equipment"
-						src="images/about-playground.jpeg"
+						alt="Free books at our indoor lending library"
+						src="images/takeabook.jpeg"
 					/>
-					<p>The playground is a popular spot for kids.</p>
+					<p>Free books at our indoor lending library.</p>
 				</div>
 			</div>
 		</div>

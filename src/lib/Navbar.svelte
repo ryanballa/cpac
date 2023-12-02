@@ -1,3 +1,7 @@
+<script>
+	import { page } from '$app/stores';
+</script>
+
 <header id="navigation" class="p-navigation is-dark">
 	<div class="p-navigation__row">
 		<div class="p-navigation__banner">
@@ -11,14 +15,17 @@
 		</div>
 		<nav class="p-navigation__nav">
 			<ul class="p-navigation__items">
-				<li class="p-navigation__item is-selected">
+				<li
+					class="p-navigation__item is-selected"
+					class:is-selected={$page.url.pathname == '/about-us'}
+				>
 					<a class="p-navigation__link" href="/about-us">About Us</a>
 				</li>
-				<li class="p-navigation__item">
+				<li class="p-navigation__item" class:is-selected={$page.url.pathname == '/renovations'}>
 					<a class="p-navigation__link" href="/renovations">Renovations</a>
 				</li>
-				<li class="p-navigation__item">
-					<a class="p-navigation__link" href="/programing">Programing</a>
+				<li class="p-navigation__item" class:is-selected={$page.url.pathname == '/programming'}>
+					<a class="p-navigation__link" href="/programming">Programming</a>
 				</li>
 			</ul>
 		</nav>
