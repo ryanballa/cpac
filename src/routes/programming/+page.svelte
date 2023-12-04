@@ -7,7 +7,7 @@
 			<h2>Diverse offerings for a dynamic community</h2>
 			<p>
 				We are in the process of community outreach to determine what programming is most desired
-				when we re-open.
+				when we re-open so we can advocate for the community.
 			</p>
 		</div>
 	</div>
@@ -25,8 +25,8 @@
 		</div>
 		<div class="col">
 			<p>
-				We are conducting a survey to see what locals want to see Clarendon Park offering when we
-				reopen. This is a great opportunity to help shape your park.
+				We are conducting a survey to see what locals want to see Clarendon Park offering when it
+				reopens. This is a great opportunity to help shape your park.
 			</p>
 			<p>
 				<a class="p-button--brand" href="#">Take Our Survey</a>
@@ -37,6 +37,6 @@
 
 <style lang="scss">
 	#programming-banner {
-		background: url(/images/programing-banner.jpeg);
+		background: url(/images/programming-banner2.jpeg);
 	}
 </style>

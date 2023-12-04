@@ -1,3 +1,18 @@
+<script>
+	import { onMount } from 'svelte';
+	import PhotoSwipeLightbox from 'photoswipe/lightbox';
+	import 'photoswipe/style.css';
+	const lightbox = new PhotoSwipeLightbox({
+		gallery: '#nov-renovations-gallery',
+		children: 'a',
+		pswpModule: () => import('photoswipe')
+	});
+
+	onMount(() => {
+		lightbox.init();
+	});
+</script>
+
 <section id="renovations-banner" class="p-strip is-deep banner-bg">
 	<div class="row--50-50 banner-inner">
 		<div class="col">
@@ -19,16 +34,23 @@
 	</div>
 </div>
 <section class="p-section">
-	<div class="row--25-25-25-25">
+	<div id="nov-renovations-gallery" class="row--25-25-25-25">
 		<h3>November 2023</h3>
 		<div class="col">
 			<div class="p-card">
 				<div class="p-card__content">
-					<img
-						class="p-card__image"
-						alt="Front of Clarendon Park Under Renovation"
-						src="images/renovations-sept-24.jpeg"
-					/>
+					<a
+						href="images/renovations-sept-24.jpeg"
+						data-pswp-width="4032"
+						data-pswp-height="3024"
+						target="_blank"
+					>
+						<img
+							class="p-card__image"
+							src="images/renovations-sept-24.jpeg"
+							alt="Front steps of the building under construction"
+						/>
+					</a>
 					<p>The old planters will become a staircase for performances.</p>
 				</div>
 			</div>
@@ -36,11 +58,18 @@
 		<div class="col">
 			<div class="p-card">
 				<div class="p-card__content">
-					<img
-						class="p-card__image"
-						alt="Front of Clarendon Park Under Renovation"
-						src="images/renovations-sept-24-2.jpeg"
-					/>
+					<a
+						href="images/renovations-sept-24-2.jpeg"
+						data-pswp-width="4032"
+						data-pswp-height="3024"
+						target="_blank"
+					>
+						<img
+							class="p-card__image"
+							src="images/renovations-sept-24-2.jpeg"
+							alt="The new entrance under construction"
+						/>
+					</a>
 					<p>The new entrance is taking shape.</p>
 				</div>
 			</div>

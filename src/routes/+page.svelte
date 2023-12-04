@@ -105,6 +105,26 @@
 		</div>
 	</div>
 </section>
+<div class="u-fixed-width">
+	<div class="row">
+		<hr class="p-rule" />
+	</div>
+</div>
+<section class="p-section">
+	<div class="row--25-75 is-split-on-medium">
+		<div class="col">
+			<blockquote class="p-pull-quote">
+				<p class="p-pull-quote__quote">
+					The more successfully a city mingles everyday diversity of uses and users in its everyday
+					streets, the more successfully, casually (and economically) its people thereby enliven and
+					support well-located parks that can thus give back grace and delight to their
+					neighborhoods instead of vacuity.
+				</p>
+				<span class="p-pull-quote__citation">Jane Jacobs, preeminent urban activist</span>
+			</blockquote>
+		</div>
+	</div>
+</section>
 
 <style lang="scss">
 	#homepage-banner {

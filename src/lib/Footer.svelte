@@ -78,9 +78,10 @@
 			<h6 class="p-heading--4">Organization</h6>
 			<nav>
 				<ul class="p-inline-list">
-					<li class="p-inline-list__item"><a href="#">About Us</a></li>
-					<li class="p-inline-list__item"><a href="#">Get Involved</a></li>
-					<li class="p-inline-list__item"><a href="#">Press</a></li>
+					<li class="p-inline-list__item"><a href="/about-us">About Us</a></li>
+					<li class="p-inline-list__item"><a href="/get-involved">Get Involved</a></li>
+					<li class="p-inline-list__item"><a href="/press">Press</a></li>
+					<li class="p-inline-list__item"><a href="/meeting-minutes">Meeting Minutes</a></li>
 					<li class="p-inline-list__item"><a href="#">Privacy Policy</a></li>
 					<li class="p-inline-list__item"><a href="#">Contact Us</a></li>
 				</ul>
