@@ -1,0 +1,6 @@
+query Page {
+	page(target: { urlPath: "/", limit: 1 }) {
+		name
+		content
+	}
+}

@@ -35,7 +35,56 @@
 </div>
 <section class="p-section">
 	<div id="nov-renovations-gallery" class="row--25-25-25-25">
-		<h3>November 2023</h3>
+		<h3>September 2023</h3>
+		<div class="col">
+			<div class="p-card">
+				<div class="p-card__content">
+					<a
+						href="images/renovations-sept-24.jpeg"
+						data-pswp-width="4032"
+						data-pswp-height="3024"
+						target="_blank"
+					>
+						<img
+							class="p-card__image"
+							src="images/renovations-sept-24.jpeg"
+							alt="Front steps of the building under construction"
+						/>
+					</a>
+					<p>The old planters will become a staircase for performances.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="p-card">
+				<div class="p-card__content">
+					<a
+						href="images/renovations-sept-24-2.jpeg"
+						data-pswp-width="4032"
+						data-pswp-height="3024"
+						target="_blank"
+					>
+						<img
+							class="p-card__image"
+							src="images/renovations-sept-24-2.jpeg"
+							alt="The new entrance under construction"
+						/>
+					</a>
+					<p>The new entrance is taking shape.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<div class="u-fixed-width">
+	<h2 class="p-muted-heading">Renovation Highlights</h2>
+	<div class="row">
+		<hr class="p-rule" />
+	</div>
+</div>
+<section class="p-section">
+	<div id="nov-renovations-gallery" class="row--25-25-25-25">
+		<h3>Key Benefits</h3>
 		<div class="col">
 			<div class="p-card">
 				<div class="p-card__content">

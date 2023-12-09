@@ -6,8 +6,27 @@
 		<div class="col">
 			<h2>Diverse offerings for a dynamic community</h2>
 			<p>
-				We are in the process of community outreach to determine what programming is most desired
-				when we re-open so we can advocate for the community.
+				Clarendon Park Community Center is closed until 2024. Please visit the Chicago Park
+				District's Website below.
+			</p>
+		</div>
+	</div>
+</section>
+<div class="u-fixed-width">
+	<h2 class="p-muted-heading">Clarendon Park Community Center is closed until Summer 2024</h2>
+	<div class="row">
+		<hr class="p-rule" />
+	</div>
+</div>
+<section class="p-section">
+	<div class="row--50-50">
+		<div class="col">
+			<h2>Chicago Park District Resources</h2>
+		</div>
+		<div class="col">
+			<p>This section will provide links to CPD local parks and their programming pages.</p>
+			<p>
+				<a class="p-button--brand" href="#">Take Our Survey</a>
 			</p>
 		</div>
 	</div>

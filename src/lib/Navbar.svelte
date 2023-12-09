@@ -27,6 +27,9 @@
 				<li class="p-navigation__item" class:is-selected={$page.url.pathname == '/programming'}>
 					<a class="p-navigation__link" href="/programming">Programming</a>
 				</li>
+				<li class="p-navigation__item" class:is-selected={$page.url.pathname == '/contact-us'}>
+					<a class="p-navigation__link" href="/contact-us">Contact Us</a>
+				</li>
 			</ul>
 		</nav>
 	</div>

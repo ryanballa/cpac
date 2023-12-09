@@ -1,3 +1,7 @@
+<script>
+	export let data;
+</script>
+
 <section id="about-us-banner" class="p-strip is-deep banner-bg">
 	<div class="row--50-50 banner-inner">
 		<div class="col">
@@ -13,6 +17,19 @@
 		</div>
 	</div>
 </section>
+<section class="p-strip">
+	<div class="row">
+		<ul class="p-inline-list--middot p-heading--4">
+			<li class="p-inline-list__item"><a href="#">About US</a></li>
+			<li class="p-inline-list__item"><a href="#">History</a></li>
+		</ul>
+	</div>
+</section>
+Test
+{#if data?.props?.content}
+	Server Data!
+{/if}
+Test
 <section class="p-section">
 	<div class="row--25-25-25-25">
 		<h2>Making Memories Together</h2>

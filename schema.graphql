@@ -1,0 +1,130 @@
+schema {
+  query: RootQueryType
+}
+
+directive @target(target: JSONObject) on QUERY
+
+"""
+The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSON
+
+"""
+The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSONObject
+
+"""Standard page"""
+type Page {
+  content: JSONObject
+  createdBy: String
+  createdDate: Float
+  data: PageData
+  endDate: Float
+  everything: JSONObject
+  id: ID
+  lastUpdated: Float
+  lastUpdatedBy: String
+  modelId: String
+  name: ID
+  ownerId: ID
+  published: String
+  query: [Query]
+  screenshot: String
+  startDate: Float
+  testRatio: Int
+  variations: JSONObject
+}
+
+type PageData {
+  """"""
+  blocks: JSON
+  css: String
+  cssCode: String
+  customFonts: JSON
+
+  """"""
+  heroActionPath: String
+
+  """"""
+  heroActionTitle: String
+
+  """Background for the hero banner"""
+  heroBannerBg: String
+
+  """"""
+  heroBannerOpacity: Float
+
+  """SEO page description"""
+  heroDescription: String
+
+  """H1 text for the banner"""
+  heroTitle: String
+  html: String
+  httpRequests: JSON
+  inputs: JSON
+  jsCode: String
+
+  """H2 Page Title"""
+  secondaryPageTitle: String
+  state: JSON
+
+  """SEO page title"""
+  title: String
+  url: JSON
+}
+
+type Query {
+  operator: String
+  property: String
+  value: JSON
+}
+
+type RootQueryType {
+  """Fetch just one page"""
+  onePage(
+    """Offset results returned, e.g. `limit: 10, offset: 10`"""
+    offset: Int
+
+    """Additional API options, e.g. `options: { includeUnpublished: true }`"""
+    options: JSONObject
+
+    """
+    Filter results via mongodb queries. e.g. `query: { id: 'abc123', data: { customNumberField: { $lt: 100 } } }
+    """
+    query: JSONObject
+
+    """Order results, e.g. `sort: { createdDate: -1 }"""
+    sort: JSONObject
+
+    """
+    Pass targeting info, like `target: { urlPath: '/foobar', device: 'mobile' }`
+    """
+    target: JSONObject
+  ): Page
+
+  """Fetch page results"""
+  page(
+    """Limit results returned, e.g. `limit: 10, offset: 10`"""
+    limit: Int
+
+    """Offset results returned, e.g. `limit: 10, offset: 10`"""
+    offset: Int
+
+    """Additional API options, e.g. `options: { includeUnpublished: true }`"""
+    options: JSONObject
+
+    """
+    Filter results via mongodb queries. e.g. `query: { id: 'abc123', data: { customNumberField: { $lt: 100 } } }
+    """
+    query: JSONObject
+
+    """Order results, e.g. `sort: { createdDate: -1 }"""
+    sort: JSONObject
+
+    """
+    Pass targeting info, like `target: { urlPath: '/foobar', device: 'mobile' }`
+    """
+    target: JSONObject
+  ): [Page]
+}
