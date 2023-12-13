@@ -1,0 +1,6 @@
+query AboutUsPage {
+	page(target: { urlPath: "/about-us", limit: 1 }) {
+		name
+		content
+	}
+}
