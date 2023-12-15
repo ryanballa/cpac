@@ -1,0 +1,6 @@
+query RenovationsPage {
+	page(target: { urlPath: "/renovations", limit: 1 }) {
+		name
+		content
+	}
+}

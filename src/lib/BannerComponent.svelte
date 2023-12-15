@@ -14,7 +14,7 @@
 		<div class="col">
 			<h1>{title}</h1>
 			<p>{description}</p>
-			{#if destinationTitle !== ''}
+			{#if destinationTitle !== '' && destination !== ''}
 				<p><a class="p-button--brand" href={destination}>{destinationTitle}</a></p>
 			{/if}
 		</div>

@@ -1,0 +1,6 @@
+query GetInvolvedPage {
+	page(target: { urlPath: "/get-involved", limit: 1 }) {
+		name
+		content
+	}
+}

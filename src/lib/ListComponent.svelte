@@ -1,14 +1,25 @@
 <script>
 	export let items;
-	export let props;
+	export let attributes;
+	const formattedData = { id: attributes['builder-id'], class: attributes.class };
 </script>
 
-<div class="col">
+<div builder-id={formattedData.id} class={`col ${formattedData.class}`}>
 	<ul class="p-list--divided">
 		{#each items as item}
 			<li class="p-list__item has-bullet">
-				{item.title}
+				{@html item.title}
 			</li>
 		{/each}
 	</ul>
 </div>
+
+<style>
+	.p-list__item {
+		padding-bottom: 0.5rem;
+	}
+	:global(.p-list__item > p) {
+		margin: 0;
+		padding: 0;
+	}
+</style>

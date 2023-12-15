@@ -157,7 +157,7 @@ export const CUSTOM_COMPONENTS = [
 			{
 				name: 'subTitle',
 				type: 'string',
-				required: true,
+				required: false,
 				defaultValue: 'Sub Title'
 			}
 		]
@@ -174,7 +174,7 @@ export const CUSTOM_COMPONENTS = [
 				subFields: [
 					{
 						name: 'title',
-						type: 'string',
+						type: 'richText',
 						required: true,
 						defaultValue: '"This is a bulleted item"'
 					}

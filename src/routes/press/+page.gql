@@ -1,0 +1,6 @@
+query PressPage {
+	page(target: { urlPath: "/press", limit: 1 }) {
+		name
+		content
+	}
+}

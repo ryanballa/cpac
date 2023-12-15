@@ -24,8 +24,6 @@ export const builderFetchPage = async ({ page }) => {
 		}
 	});
 
-	console.log(content);
-
 	return {
 		props: {
 			content
