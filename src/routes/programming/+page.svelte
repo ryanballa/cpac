@@ -1,4 +1,15 @@
-<section id="programming-banner" class="p-strip is-deep banner-bg">
+<script>
+	import PageComponent from '$lib/PageComponent.svelte';
+
+	export let data;
+	$: ({ ProgrammingPage } = data);
+</script>
+
+{#if $ProgrammingPage}
+	<PageComponent contentData={$ProgrammingPage.data.page[0].content} />
+{/if}
+
+<!-- <section id="programming-banner" class="p-strip is-deep banner-bg">
 	<div class="row--50-50 banner-inner">
 		<div class="col">
 			<h1>Programming at Clarendon Park</h1>
@@ -58,4 +69,4 @@
 	#programming-banner {
 		background: url(/images/programming-banner2.jpeg);
 	}
-</style>
+</style> -->
