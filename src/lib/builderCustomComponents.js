@@ -4,6 +4,8 @@ import ImageGalleryComponent from './ImageGalleryComponent.svelte';
 import QuoteComponent from './QuoteComponent.svelte';
 import SectionComponent from './SectionComponent.svelte';
 import ListComponent from './ListComponent.svelte';
+import SubNav from './SubNav.svelte';
+import ParagraphComponent from './ParagraphComponent.svelte';
 
 export const CUSTOM_COMPONENTS = [
 	{
@@ -159,6 +161,11 @@ export const CUSTOM_COMPONENTS = [
 				type: 'string',
 				required: false,
 				defaultValue: 'Sub Title'
+			},
+			{
+				name: 'division',
+				type: 'string',
+				enum: ['25-75', '50-50']
 			}
 		]
 	},
@@ -179,6 +186,44 @@ export const CUSTOM_COMPONENTS = [
 						defaultValue: '"This is a bulleted item"'
 					}
 				]
+			}
+		]
+	},
+	{
+		component: SubNav,
+		name: 'SubNav',
+		noWrap: false,
+		inputs: [
+			{
+				name: 'items',
+				type: 'list',
+				defaultValue: [{ title: 'Link One' }],
+				subFields: [
+					{
+						name: 'title',
+						type: 'string',
+						required: true,
+						defaultValue: '"Link One"'
+					},
+					{
+						name: 'href',
+						type: 'string',
+						required: true,
+						defaultValue: '/renovations'
+					}
+				]
+			}
+		]
+	},
+	{
+		component: ParagraphComponent,
+		name: 'Paragraph',
+		noWrap: true,
+		inputs: [
+			{
+				name: 'copy',
+				type: 'string',
+				required: true
 			}
 		]
 	}

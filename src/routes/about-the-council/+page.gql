@@ -1,0 +1,6 @@
+query AboutTheCouncil {
+	page(target: { urlPath: "/about-the-council", limit: 1 }) {
+		name
+		content
+	}
+}

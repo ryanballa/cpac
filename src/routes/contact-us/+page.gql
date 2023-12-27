@@ -1,0 +1,6 @@
+query ContactUsPage {
+	page(target: { urlPath: "/contact-us", limit: 1 }) {
+		name
+		content
+	}
+}

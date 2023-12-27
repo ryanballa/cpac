@@ -15,12 +15,14 @@
 	destinationTitle={contentData.data.heroActionTitle}
 	overlayOpacity={contentData.data.heroBannerOpacity}
 />
-<div class="u-fixed-width">
-	<h2 class="p-muted-heading">{contentData.data.secondaryPageTitle}</h2>
-	<div class="row">
-		<hr class="p-rule" />
+{#if contentData.data.secondaryPageTitle}
+	<div class="u-fixed-width">
+		<h2 class="p-muted-heading">{contentData.data.secondaryPageTitle}</h2>
+		<div class="row">
+			<hr class="p-rule" />
+		</div>
 	</div>
-</div>
+{/if}
 <Content
 	enrich={true}
 	model="page"

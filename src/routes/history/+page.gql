@@ -1,0 +1,6 @@
+query HistoryPage {
+	page(target: { urlPath: "/history", limit: 1 }) {
+		name
+		content
+	}
+}

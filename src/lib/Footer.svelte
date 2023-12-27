@@ -82,8 +82,8 @@
 					<li class="p-inline-list__item"><a href="/get-involved">Get Involved</a></li>
 					<li class="p-inline-list__item"><a href="/press">Press</a></li>
 					<li class="p-inline-list__item"><a href="/meeting-minutes">Meeting Minutes</a></li>
-					<li class="p-inline-list__item"><a href="#">Privacy Policy</a></li>
-					<li class="p-inline-list__item"><a href="#">Contact Us</a></li>
+					<!-- <li class="p-inline-list__item"><a href="#">Privacy Policy</a></li> -->
+					<li class="p-inline-list__item"><a href="/contact-us">Contact Us</a></li>
 				</ul>
 			</nav>
 		</div>
