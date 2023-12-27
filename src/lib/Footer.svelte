@@ -1,6 +1,7 @@
 <script>
 	let formError = false;
 	import { enhance } from '$app/forms';
+	import SocialIcons from './SocialIcons.svelte';
 </script>
 
 <footer>
@@ -8,14 +9,7 @@
 		<div class="row--25-25-50">
 			<div class="col">
 				<h5 class="p-heading--3">Connect With Us</h5>
-				<ul class="socials">
-					<li>
-						<a href="https://www.facebook.com/ClarendonParkAdvisoryCouncil"
-							><img src="images/social/facebook.png" alt="Facebook" /></a
-						>
-					</li>
-					<li><a href="/"><img src="images/social/instagram.png" alt="Instagram" /></a></li>
-				</ul>
+				<SocialIcons />
 			</div>
 			<div class="col">
 				<h5 class="p-heading--3">Clarendon Park Community Center</h5>
@@ -119,19 +113,8 @@
 			background-color: #101f2f;
 		}
 
-		& .socials {
-			margin: 0;
-			padding-left: 0;
-		}
-
 		& .col {
 			padding-bottom: var(--sp-medium);
-		}
-
-		& .socials li {
-			display: inline-block;
-			list-style: none;
-			margin-right: 16px;
 		}
 
 		& .copyright {
