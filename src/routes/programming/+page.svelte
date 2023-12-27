@@ -5,6 +5,8 @@
 	$: ({ ProgrammingPage } = data);
 </script>
 
-{#if $ProgrammingPage}
-	<PageComponent contentData={$ProgrammingPage.data.page[0].content} />
+{#if $ProgrammingPage.fetching}
+	Loading
+{:else}
+	<PageComponent contentData={$ProgrammingPage.data.page[0]?.content} />
 {/if}

@@ -9,7 +9,11 @@
 			<div class="col">
 				<h5 class="p-heading--3">Connect With Us</h5>
 				<ul class="socials">
-					<li><a href="/"><img src="images/social/facebook.png" alt="Facebook" /></a></li>
+					<li>
+						<a href="https://www.facebook.com/ClarendonParkAdvisoryCouncil"
+							><img src="images/social/facebook.png" alt="Facebook" /></a
+						>
+					</li>
 					<li><a href="/"><img src="images/social/instagram.png" alt="Instagram" /></a></li>
 				</ul>
 			</div>
