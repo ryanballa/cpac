@@ -13,7 +13,7 @@
 			</div>
 			<div class="col">
 				<h5 class="p-heading--3">Clarendon Park Community Center</h5>
-				<p>4501 N Clarendon Ave,<br />Chicago, IL 60640</p>
+				<p>4501 N Clarendon Ave<br />Chicago, IL 60640</p>
 			</div>
 			<div class="col">
 				<h5 class="p-heading--3">Join our Email List</h5>
@@ -79,8 +79,6 @@
 					<li class="p-inline-list__item"><a href="/about-us">About Us</a></li>
 					<li class="p-inline-list__item"><a href="/get-involved">Get Involved</a></li>
 					<li class="p-inline-list__item"><a href="/press">Press</a></li>
-					<li class="p-inline-list__item"><a href="/meeting-minutes">Meeting Minutes</a></li>
-					<!-- <li class="p-inline-list__item"><a href="#">Privacy Policy</a></li> -->
 					<li class="p-inline-list__item"><a href="/contact-us">Contact Us</a></li>
 				</ul>
 			</nav>
