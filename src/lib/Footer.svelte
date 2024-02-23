@@ -19,7 +19,7 @@
 				<h5 class="p-heading--3">Join our Email List</h5>
 				<form
 					novalidate
-					action="https://chicagofreemo.us11.list-manage.com/subscribe/post?u=4734a8c4344908060f5595448&amp;id=9b8ee91780&amp;f_id=00539de0f0"
+					action="https://gmail.us18.list-manage.com/subscribe/post?u=e8f4e809bd08c9d1d0aadb849&amp;id=d3f1c2f56c&amp;f_id=00d1c2e1f0"
 					method="post"
 					id="mc-embedded-subscribe-form"
 					name="mc-embedded-subscribe-form"
