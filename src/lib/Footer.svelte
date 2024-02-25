@@ -2,6 +2,24 @@
 	let formError = false;
 	import { enhance } from '$app/forms';
 	import SocialIcons from './SocialIcons.svelte';
+
+	let email = '';
+
+	async function handleSubmit() {
+		let body = {
+			email
+		};
+		let result = await fetch('/api/registerEmail.json', {
+			method: 'post',
+			body: JSON.stringify(body)
+		});
+		const registerEmailResponse = await result.json();
+		if (registerEmailResponse.status === 200) {
+			email = '';
+		} else {
+			console.log(registerEmailResponse);
+		}
+	}
 </script>
 
 <footer>
@@ -17,30 +35,7 @@
 			</div>
 			<div class="col">
 				<h5 class="p-heading--3">Join our Email List</h5>
-				<form
-					novalidate
-					action="https://gmail.us18.list-manage.com/subscribe/post?u=e8f4e809bd08c9d1d0aadb849&amp;id=d3f1c2f56c&amp;f_id=00d1c2e1f0"
-					method="post"
-					id="mc-embedded-subscribe-form"
-					name="mc-embedded-subscribe-form"
-					class="validate {formError ? 'is-error' : ''}"
-					use:enhance={({ formElement, formData, action, cancel, submitter }) => {
-						console.log(formData);
-						// `formElement` is this `<form>` element
-						// `formData` is its `FormData` object that's about to be submitted
-						// `action` is the URL to which the form is posted
-						// calling `cancel()` will prevent the submission
-						// `submitter` is the `HTMLElement` that caused the form to be submitted
-
-						return async ({ result, update }) => {
-							if (result.type == 'error') {
-								formError = true;
-							}
-							// `result` is an `ActionResult` object
-							// `update` is a function which triggers the default logic that would be triggered if this callback wasn't set
-						};
-					}}
-				>
+				<form on:submit|preventDefault={handleSubmit}>
 					<div class="p-form-validation">
 						<label for="exampleInputEmail1">Email address</label>
 						<input
