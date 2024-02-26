@@ -1,6 +1,19 @@
 import type { Handle } from '@sveltejs/kit';
+let allowedDomains = process.env['ALLOWED_DOMAINS'];
 
 export const handle: Handle = async ({ resolve, event }) => {
+	let cors = false;
+
+	let originDomain = null;
+	try {
+		originDomain = new URL(event.request.headers.get('origin') || '').hostname;
+		if (allowedDomains.includes(originDomain)) {
+			cors = `https://${originDomain}`;
+		}
+	} catch (e) {
+		console.log('Invalid origin', e);
+	}
+
 	// Apply CORS header for API routes
 	if (event.url.pathname.startsWith('/api')) {
 		// Required for CORS to work
@@ -8,7 +21,7 @@ export const handle: Handle = async ({ resolve, event }) => {
 			return new Response(null, {
 				headers: {
 					'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
-					'Access-Control-Allow-Origin': '*',
+					'Access-Control-Allow-Origin': cors,
 					'Access-Control-Allow-Headers': '*'
 				}
 			});
