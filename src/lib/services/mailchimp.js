@@ -1,7 +1,5 @@
-import dotenv from 'dotenv';
 import base64 from 'base-64';
-dotenv.config();
-let MAILCHIMP_API_KEY = process.env['MAILCHIMP_API_KEY'];
+import { MAILCHIMP_API_KEY } from '$env/static/private';
 
 async function registerEmail(email) {
 	try {
