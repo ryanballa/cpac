@@ -1,23 +1,29 @@
 <script>
 	let formError = false;
-	import { enhance } from '$app/forms';
 	import SocialIcons from './SocialIcons.svelte';
 
 	let email = '';
+	let submitted = false;
 
-	async function handleSubmit() {
-		let body = {
-			email
-		};
-		let result = await fetch('/api/registerEmail.json', {
+	async function handleSubmit(event) {
+		const formData = new FormData(event.target);
+
+		email = formData.get('email');
+
+		let result = await fetch('/api/register-email', {
 			method: 'post',
-			body: JSON.stringify(body)
+			body: JSON.stringify({ email }),
+			headers: {
+				'x-sveltekit-action': true
+			}
 		});
 		const registerEmailResponse = await result.json();
-		if (registerEmailResponse.status === 200) {
+		if (registerEmailResponse.status === 'subscribed') {
 			email = '';
+			formError = false;
+			submitted = true;
 		} else {
-			console.log(registerEmailResponse);
+			formError = true;
 		}
 	}
 </script>
@@ -35,29 +41,35 @@
 			</div>
 			<div class="col">
 				<h5 class="p-heading--3">Join our Email List</h5>
-				<form on:submit|preventDefault={handleSubmit}>
-					<div class="p-form-validation">
-						<label for="exampleInputEmail1">Email address</label>
-						<input
-							class={formError ? 'is-invalid' : ''}
-							aria-invalid="false"
-							aria-describedby="emailInputErrorMessage"
-							type="email"
-							id="exampleInputEmail1"
-							name="EMAIL"
-							placeholder="example@gmail.com"
-							autocomplete="off"
-							required
-						/>
-						<p
-							class="p-form-validation__message {formError ? '' : 'u-hide'}"
-							id="emailInputErrorMessage"
+				{#if !submitted}<form on:submit|preventDefault={handleSubmit}>
+						<div class="p-form-validation">
+							<label for="exampleInputEmail1">Email address</label>
+							<input
+								class={formError ? 'is-invalid' : ''}
+								aria-invalid="false"
+								aria-describedby="emailInputErrorMessage"
+								type="email"
+								id="exampleInputEmail1"
+								name="email"
+								placeholder="example@gmail.com"
+								autocomplete="off"
+								required
+							/>
+							<p
+								class="p-form-validation__message {formError ? '' : 'u-hide'}"
+								id="emailInputErrorMessage"
+							>
+								<i class="p-icon p-icon--error" />You are already signed up.
+							</p>
+						</div>
+						<button type="submit" name="submit" class="p-button--brand is-processing">Submit</button
 						>
-							Email is required.
-						</p>
-					</div>
-					<button type="submit" name="submit" class="p-button--brand is-processing">Submit</button>
-				</form>
+					</form>
+				{:else}
+					<p class="p-form-validation__message">
+						<i class="p-icon p-icon--success" />You are signed up!
+					</p>
+				{/if}
 			</div>
 		</div>
 	</section>
@@ -112,6 +124,13 @@
 
 		& .copyright {
 			text-align: center;
+		}
+
+		& .p-form-validation__message {
+			& .p-icon {
+				margin-right: 0.5em;
+			}
+			padding-left: 0;
 		}
 
 		& .p-section.end-section {

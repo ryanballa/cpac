@@ -5,15 +5,14 @@ let MAILCHIMP_API_KEY = process.env['MAILCHIMP_API_KEY'];
 
 async function registerEmail(email) {
 	try {
-		// substitute your Mailchimp settings here
-		let dc = '';
-		let list_id = '';
+		let dc = 'us18';
+		let list_id = 'd3f1c2f56c';
 		let url = `https://${dc}.api.mailchimp.com/3.0/lists/${list_id}/members`;
 		let password = MAILCHIMP_API_KEY;
 
 		let data = {
 			email_address: email,
-			status: 'unsubscribed'
+			status: 'subscribed'
 		};
 
 		let headers = new Headers();
@@ -29,7 +28,7 @@ async function registerEmail(email) {
 			return mailchimpResponse;
 		}
 	} catch (error) {
-		console.error(error);
+		return error;
 	}
 }
 
