@@ -1,10 +1,10 @@
 import type { Handle } from '@sveltejs/kit';
-let allowedDomains = process.env['ALLOWED_DOMAINS'];
+let allowedDomains = ['clarendonpac.org'];
 
 export const handle: Handle = async ({ resolve, event }) => {
-	let cors = false;
+	let cors = 'null';
 
-	let originDomain = null;
+	let originDomain = '';
 	try {
 		originDomain = new URL(event.request.headers.get('origin') || '').hostname;
 		if (allowedDomains.includes(originDomain)) {
