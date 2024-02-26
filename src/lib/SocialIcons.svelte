@@ -61,10 +61,6 @@
 			width: 30px;
 		}
 
-		& .instagram {
-			width: 45px;
-		}
-
 		& li {
 			height: auto;
 			display: inline-block;
