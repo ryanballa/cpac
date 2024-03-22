@@ -1,0 +1,6 @@
+query TennisPage {
+	page(target: { urlPath: "/tennis", limit: 1 }) {
+		name
+		content
+	}
+}
