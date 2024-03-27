@@ -5,13 +5,11 @@ export const handle: Handle = async ({ resolve, event }) => {
 	let cors = 'null';
 
 	let originDomain = '';
-	try {
-		originDomain = new URL(event.request.headers.get('origin') || '').hostname;
+	if (event.request.headers.get('origin') !== null) {
+		originDomain = new URL(event.request.headers.get('origin')).hostname;
 		if (allowedDomains.includes(originDomain)) {
 			cors = `https://${originDomain}`;
 		}
-	} catch (e) {
-		console.log('Invalid origin', e);
 	}
 
 	// Apply CORS header for API routes
