@@ -8,8 +8,8 @@ const config = {
 		adapter: adapter({
 			// See below for an explanation of these options
 			routes: {
-				include: ['<all>'],
-				exclude: ['/*']
+				include: ['/*'],
+				exclude: ['/.svelte-kit/*']
 			},
 			pages: 'build',
 			assets: 'build',
