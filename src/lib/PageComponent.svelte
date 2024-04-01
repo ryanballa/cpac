@@ -7,6 +7,11 @@
 	export let contentData;
 </script>
 
+<svelte:head>
+	<title>{contentData?.data?.title} | Clarendon Park Advisory Council</title>
+	<meta name="description" content={contentData?.data?.description} />
+</svelte:head>
+
 <BannerComponent
 	backgroundURL={contentData.data.heroBannerBg}
 	title={contentData.data.heroTitle}

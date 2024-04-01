@@ -43,6 +43,9 @@ type PageData {
   cssCode: String
   customFonts: JSON
 
+  """SEO Description Field"""
+  description: String
+
   """"""
   heroActionPath: String
 
