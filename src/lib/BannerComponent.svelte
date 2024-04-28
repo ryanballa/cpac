@@ -14,7 +14,7 @@
 	<Image
 		background="auto"
 		class="bannerImg"
-		height="250"
+		height="100%"
 		width="1350"
 		layout="constrained"
 		src={backgroundURL}
