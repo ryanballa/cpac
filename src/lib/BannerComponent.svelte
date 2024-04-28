@@ -1,8 +1,5 @@
 <script>
 	import { Image } from '@unpic/svelte';
-	import { getPixels } from '@unpic/pixels';
-	import { encode } from 'blurhash';
-	import { blurhashToImageCssString } from '@unpic/placeholder';
 
 	export let backgroundURL;
 	export let title = '';
@@ -10,30 +7,18 @@
 	export let destination = '/';
 	export let destinationTitle = '';
 	export let overlayOpacity = 0.5;
-
-	let imgCSS;
-
-	const fetchURL = async function () {
-		const jpgData = await getPixels(backgroundURL);
-		const data = Uint8ClampedArray.from(jpgData.data);
-		const blurhash = encode(data, jpgData.width, jpgData.height, 4, 4);
-
-		imgCSS = blurhashToImageCssString(blurhash);
-	};
-
-	fetchURL();
 </script>
 
 <section class="p-strip banner-bg">
 	<div class="overlay" style={`opacity: ${overlayOpacity};`} />
 	<Image
+		background="auto"
 		class="bannerImg"
 		height="250"
 		width="1350"
 		layout="constrained"
 		src={backgroundURL}
 		alt={destinationTitle}
-		style={imgCSS}
 	/>
 	<div class="row--50-50 banner-inner">
 		<div class="col">

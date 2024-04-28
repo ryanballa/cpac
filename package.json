@@ -10,11 +10,13 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
+		"@esbuild-plugins/node-globals-polyfill": "^0.2.3",
+		"@rollup/plugin-inject": "^5.0.5",
 		"@sveltejs/adapter-cloudflare": "^3.0.0",
 		"@sveltejs/adapter-static": "^3.0.1",
-		"@sveltejs/enhanced-img": "^0.2.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
+		"buffer": "^6.0.3",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte": "^2.30.0",
@@ -31,10 +33,7 @@
 	"type": "module",
 	"dependencies": {
 		"@builder.io/sdk-svelte": "^0.7.3",
-		"@unpic/pixels": "^1.2.2",
-		"@unpic/placeholder": "^0.1.2",
 		"@unpic/svelte": "^0.0.51",
-		"base-64": "^1.0.0",
-		"blurhash": "^2.0.5"
+		"base-64": "^1.0.0"
 	}
 }
