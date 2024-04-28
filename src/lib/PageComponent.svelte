@@ -12,14 +12,16 @@
 	<meta name="description" content={contentData?.data?.description} />
 </svelte:head>
 
-<BannerComponent
-	backgroundURL={contentData.data.heroBannerBg}
-	title={contentData.data.heroTitle}
-	description={contentData.data.heroDescription}
-	destination={contentData.data.heroActionPath}
-	destinationTitle={contentData.data.heroActionTitle}
-	overlayOpacity={contentData.data.heroBannerOpacity}
-/>
+{#if contentData?.data?.heroBannerBg}
+	<BannerComponent
+		backgroundURL={contentData.data.heroBannerBg}
+		title={contentData.data.heroTitle}
+		description={contentData.data.heroDescription}
+		destination={contentData.data.heroActionPath}
+		destinationTitle={contentData.data.heroActionTitle}
+		overlayOpacity={contentData.data.heroBannerOpacity}
+	/>
+{/if}
 {#if contentData.data.secondaryPageTitle}
 	<div class="u-fixed-width">
 		<h2 class="p-muted-heading">{contentData.data.secondaryPageTitle}</h2>

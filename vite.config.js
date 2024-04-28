@@ -1,9 +1,10 @@
 import { sveltekit } from '@sveltejs/kit/vite';
+import { enhancedImages } from '@sveltejs/enhanced-img';
 import houdini from 'houdini/vite';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-	plugins: [houdini(), sveltekit()],
+	plugins: [houdini(), sveltekit(), enhancedImages()],
 	css: {
 		preprocessorOptions: {
 			scss: {

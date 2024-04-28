@@ -1,15 +1,40 @@
 <script>
-	export let backgroundURL = '';
+	import { Image } from '@unpic/svelte';
+	import { getPixels } from '@unpic/pixels';
+	import { encode } from 'blurhash';
+	import { blurhashToImageCssString } from '@unpic/placeholder';
+
+	export let backgroundURL;
 	export let title = '';
 	export let description = '';
 	export let destination = '/';
 	export let destinationTitle = '';
 	export let overlayOpacity = 0.5;
+
+	let imgCSS;
+
+	const fetchURL = async function () {
+		const jpgData = await getPixels(backgroundURL);
+		const data = Uint8ClampedArray.from(jpgData.data);
+		const blurhash = encode(data, jpgData.width, jpgData.height, 4, 4);
+
+		imgCSS = blurhashToImageCssString(blurhash);
+	};
+
+	fetchURL();
 </script>
 
 <section class="p-strip banner-bg">
 	<div class="overlay" style={`opacity: ${overlayOpacity};`} />
-	<img src={backgroundURL} alt={destinationTitle} />
+	<Image
+		class="bannerImg"
+		height="250"
+		width="1350"
+		layout="constrained"
+		src={backgroundURL}
+		alt={destinationTitle}
+		style={imgCSS}
+	/>
 	<div class="row--50-50 banner-inner">
 		<div class="col">
 			<h1>{title}</h1>
@@ -22,6 +47,15 @@
 </section>
 
 <style lang="scss">
+	:global(.bannerImg) {
+		position: absolute;
+		left: 0;
+		top: 0;
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+	}
+
 	.banner-bg {
 		height: 100%;
 		max-height: 500px;
@@ -30,15 +64,6 @@
 		color: $color-light;
 		position: relative;
 		width: 100%;
-
-		& img {
-			position: absolute;
-			left: 0;
-			top: 0;
-			object-fit: cover;
-			height: 100%;
-			width: 100%;
-		}
 
 		& .overlay {
 			background-color: #292525;
@@ -56,6 +81,7 @@
 			z-index: 1;
 		}
 	}
+
 	.banner-inner {
 		position: relative;
 		z-index: 2;

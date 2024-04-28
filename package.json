@@ -12,6 +12,7 @@
 	"devDependencies": {
 		"@sveltejs/adapter-cloudflare": "^3.0.0",
 		"@sveltejs/adapter-static": "^3.0.1",
+		"@sveltejs/enhanced-img": "^0.2.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"eslint": "^8.28.0",
@@ -30,6 +31,10 @@
 	"type": "module",
 	"dependencies": {
 		"@builder.io/sdk-svelte": "^0.7.3",
-		"base-64": "^1.0.0"
+		"@unpic/pixels": "^1.2.2",
+		"@unpic/placeholder": "^0.1.2",
+		"@unpic/svelte": "^0.0.51",
+		"base-64": "^1.0.0",
+		"blurhash": "^2.0.5"
 	}
 }
