@@ -23,11 +23,11 @@
 </section>
 
 <style lang="scss">
-	.slot-container :global(.p-card:only-of-type) .image-size-percent-fifty-percent {
+	.slot-container .image-size-percent-fifty-percent :global(.p-card:only-of-type) {
 		width: 50%;
 	}
 
-	.slot-container :global(.p-card:only-of-type) .image-size-percent-one-hundred-percent {
+	.slot-container .image-size-percent-one-hundred-percent :global(.p-card:only-of-type) {
 		width: 100%;
 	}
 </style>
