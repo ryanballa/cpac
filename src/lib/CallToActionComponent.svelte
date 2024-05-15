@@ -2,7 +2,7 @@
 	export let sectionTitle;
 	export let actionText;
 	export let description;
-	export let imageSize = 'fifty-percent';
+	export let imageSize;
 </script>
 
 <section class="p-section">
