@@ -26,14 +26,14 @@ export const CUSTOM_COMPONENTS = [
 				defaultValue: 'Click Here'
 			},
 			{
-				name: 'description',
-				type: 'string',
-				defaultValue: ''
-			},
-			{
 				name: 'imageSize',
 				type: 'string',
 				enum: ['fifty-percent', 'one-hundred-percent']
+			},
+			{
+				name: 'description',
+				type: 'string',
+				defaultValue: ''
 			}
 		],
 		defaultChildren: [

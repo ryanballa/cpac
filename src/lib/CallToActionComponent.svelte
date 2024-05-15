@@ -1,8 +1,8 @@
 <script>
 	export let sectionTitle;
 	export let actionText;
-	export let description;
 	export let imageSize;
+	export let description;
 </script>
 
 <section class="p-section">
