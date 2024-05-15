@@ -2,6 +2,7 @@
 	export let sectionTitle;
 	export let actionText;
 	export let description;
+	export let imageSize = 'fifty-percent';
 </script>
 
 <section class="p-section">
@@ -14,7 +15,7 @@
 			<p>
 				{description}
 			</p>
-			<div class="slot-container">
+			<div class="slot-container image-size-percent-{imageSize}">
 				<slot />
 			</div>
 		</div>
@@ -22,7 +23,11 @@
 </section>
 
 <style lang="scss">
-	.slot-container :global(.p-card:only-of-type) {
+	.slot-container :global(.p-card:only-of-type) .image-size-percent-fifty-percent {
 		width: 50%;
+	}
+
+	.slot-container :global(.p-card:only-of-type) .image-size-percent-one-hundred-percent {
+		width: 100%;
 	}
 </style>

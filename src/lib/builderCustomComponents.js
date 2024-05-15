@@ -6,6 +6,7 @@ import SectionComponent from './SectionComponent.svelte';
 import ListComponent from './ListComponent.svelte';
 import SubNav from './SubNav.svelte';
 import ParagraphComponent from './ParagraphComponent.svelte';
+import Button from './ButtonComponent.svelte';
 
 export const CUSTOM_COMPONENTS = [
 	{
@@ -28,6 +29,11 @@ export const CUSTOM_COMPONENTS = [
 				name: 'description',
 				type: 'string',
 				defaultValue: ''
+			},
+			{
+				name: 'imageSize',
+				type: 'string',
+				enum: ['fifty-percent', 'one-hundred-percent']
 			}
 		],
 		defaultChildren: [
@@ -224,6 +230,24 @@ export const CUSTOM_COMPONENTS = [
 				name: 'copy',
 				type: 'string',
 				required: true
+			}
+		]
+	},
+	{
+		component: Button,
+		canHaveChildren: false,
+		name: 'Button',
+		noWrap: true,
+		inputs: [
+			{
+				name: 'actionText',
+				type: 'string',
+				defaultValue: 'Click Me'
+			},
+			{
+				name: 'actionUrl',
+				type: 'string',
+				defaultValue: '/'
 			}
 		]
 	}

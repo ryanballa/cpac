@@ -10,8 +10,10 @@
 	<div class="p-card__content">
 		<img class="p-card__image" alt={altText} src={image} />
 		<p>{description}</p>
-		{#if actionText && actionUrl}<p>
+		{#if actionText && actionUrl}
+			<p>
 				<a class="p-button--brand" href={actionUrl}>{actionText}</a>
-			</p>{/if}
+			</p>
+		{/if}
 	</div>
 </div>
