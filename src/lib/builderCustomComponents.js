@@ -26,7 +26,7 @@ export const CUSTOM_COMPONENTS = [
 				defaultValue: 'Click Here'
 			},
 			{
-				name: 'imageSizeOption',
+				name: 'sizeImageOption',
 				type: 'string',
 				enum: ['fifty-percent', 'one-hundred-percent']
 			},

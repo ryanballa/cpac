@@ -1,7 +1,7 @@
 <script>
 	export let sectionTitle;
 	export let actionText;
-	export let imageSizeOption;
+	export let sizeImageOption;
 	export let description;
 </script>
 
@@ -15,7 +15,7 @@
 			<p>
 				{description}
 			</p>
-			<div class="slot-container image-size-{imageSizeOption}">
+			<div class="slot-container image-size-{sizeImageOption}">
 				<slot />
 			</div>
 		</div>
