@@ -21,14 +21,14 @@ export const CUSTOM_COMPONENTS = [
 				defaultValue: 'My Title'
 			},
 			{
+				name: 'Image Size Option',
+				type: 'string',
+				enum: ['fifty-percent', 'one-hundred-percent']
+			},
+			{
 				name: 'actionText',
 				type: 'string',
 				defaultValue: 'Click Here'
-			},
-			{
-				name: 'sizeImageOption',
-				type: 'string',
-				enum: ['fifty-percent', 'one-hundred-percent']
 			},
 			{
 				name: 'description',
