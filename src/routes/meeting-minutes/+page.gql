@@ -1,0 +1,6 @@
+query MeetingMinutes {
+	page(target: { urlPath: "meeting-minutes" }) {
+		name
+		content
+	}
+}
