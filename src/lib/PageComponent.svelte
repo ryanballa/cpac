@@ -22,7 +22,7 @@
 		overlayOpacity={contentData.data.heroBannerOpacity}
 	/>
 {/if}
-{#if contentData.data.secondaryPageTitle}
+{#if contentData?.data?.secondaryPageTitle && contentData?.data?.secondaryPageTitle !== 'Content Title'}
 	<div class="u-fixed-width">
 		<h2 class="p-muted-heading">{contentData.data.secondaryPageTitle}</h2>
 		<div class="row">
@@ -35,6 +35,6 @@
 	model="page"
 	apiKey={BUILDER_PUBLIC_API_KEY}
 	content={contentData}
-	data={contentData.data}
+	data={contentData?.data}
 	customComponents={CUSTOM_COMPONENTS}
 />

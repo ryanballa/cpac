@@ -1,0 +1,7 @@
+query DynamicPage($slug: String) {
+	page(target: { urlPath: $slug }) {
+		name
+		content
+		__typename
+	}
+}
