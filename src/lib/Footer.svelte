@@ -86,6 +86,7 @@
 					<li class="p-inline-list__item"><a href="/about-us">About Us</a></li>
 					<li class="p-inline-list__item"><a href="/get-involved">Get Involved</a></li>
 					<li class="p-inline-list__item"><a href="/press">Press</a></li>
+					<li class="p-inline-list__item"><a href="/meeting-minutes">Meeting Minutes</a></li>
 					<li class="p-inline-list__item"><a href="/contact-us">Contact Us</a></li>
 				</ul>
 			</nav>
@@ -95,7 +96,7 @@
 		<div class="row">
 			<div class="col-12">
 				<p class="u-no-max-width copyright">
-					<small>&copy; 2024 Clarendon Park Advisory Council</small>
+					<small>&copy; 2025 Clarendon Park Advisory Council</small>
 				</p>
 			</div>
 		</div>
