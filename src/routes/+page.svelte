@@ -11,5 +11,3 @@
 {:else}
 	<PageComponent contentData={$Page.data.page[0]?.content} />
 {/if}
-
-We are excited for the renovated Clarendon Community Center Opening July 7th, 2025.
